@@ -4,12 +4,32 @@ import {
   TwitterShareButton,
   TwitterTweetEmbed,
 } from "react-twitter-embed";
+import './Widgets.css'
 
+
+
+import SearchIcon from '@mui/icons-material/Search';
 function Widgets() {
   return (
     <div className='widgets'>
+      <div className='widgets__input'>
+      <SearchIcon className="widgets__searchIcon" />
+      <input placeholder="Search Twitter" type="text" />
+      </div>
+
+      <div className="widgets__widgetContainer">
+      <h2>What's happening</h2>
+      <TwitterTweetEmbed tweetId={"1515722279426142208"} />     
+      <TwitterTimelineEmbed sourceType="profile" screenName="onyinye_00" options={{ height: 400 }}/>
+      <TwitterShareButton
+          url={"https://facebook.com/cleverprogrammer"}
+          options={{ text: "#reactjs is awesome", via: "cleverqazi" }}
+        />
         
-        <h2>Widgets</h2>
+       
+       </div>
+        
+        
         
         </div>
   )
